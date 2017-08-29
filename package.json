@@ -6,7 +6,11 @@
   "scripts": {
     "test": "tape test/**.js"
   },
-  "author": "Kevin Isom<kevin.isom@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kevnz/nom-de-plume.git"
+  },
+  "author": "Kevin Isom<kevin.isom@gmail.com>(kevin@kevinisom.info)",
   "license": "Unlicense",
   "devDependencies": {
     "lodash": "^4.17.4",
