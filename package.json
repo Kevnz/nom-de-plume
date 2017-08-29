@@ -1,0 +1,20 @@
+{
+  "name": "nom-de-plume",
+  "version": "1.0.0",
+  "description": "Allows aliasing of module names",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/**.js"
+  },
+  "author": "Kevin Isom<kevin.isom@gmail.com>",
+  "license": "Unlicense",
+  "devDependencies": {
+    "lodash": "^4.17.4",
+    "preact": "^8.2.5",
+    "preact-compat": "^3.17.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "tape": "^4.8.0",
+    "underscore": "^1.8.3"
+  }
+}
