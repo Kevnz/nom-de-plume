@@ -1,6 +1,6 @@
 {
   "name": "nom-de-plume",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Allows aliasing of module names",
   "main": "index.js",
   "scripts": {
@@ -10,15 +10,17 @@
     "type": "git",
     "url": "https://github.com/Kevnz/nom-de-plume.git"
   },
-  "author": "Kevin Isom<kevin.isom@gmail.com>(kevin@kevinisom.info)",
+  "homepage": "http://kevinisom.info/nom-de-plume",
+  "author": "Kevin Isom<kevin.isom@gmail.com>",
   "license": "Unlicense",
   "devDependencies": {
-    "lodash": "^4.17.4",
-    "preact": "^8.2.5",
-    "preact-compat": "^3.17.0",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "tape": "^4.8.0",
-    "underscore": "^1.8.3"
+    "@kev_nz/publisher": "^1.0.1",
+    "lodash": "^4.17.11",
+    "preact": "^8.4.2",
+    "preact-compat": "^3.18.4",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "tape": "^4.10.1",
+    "underscore": "^1.9.1"
   }
 }
