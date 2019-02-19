@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>nom-de-plume</title>
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <meta name="description" content="Allows aliasing of module names" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+  <div class="container">
+  <h1 id="nom-de-plume">Nom De Plume</h1>
+<p>Provide the ability to alias package names in order to substitute one dependency for another.</p>
+<h2 id="install">Install</h2>
+<p><code>npm install nom-de-plume --save</code></p>
+<h2 id="usage">Usage</h2>
+<p>In your <code>package.json</code> file</p>
+<pre><code class="json language-json">{
+  "alias": {
+    "underscore": "lodash",
+    "react": "preact-compat",
+    "react-dom": "preact-compat"
+  }
+}</code></pre>
+<p>Or in an <code>.aliasrc</code> file</p>
+<pre><code class="json language-json">{
+  "underscore": "lodash",
+  "react": "preact-compat",
+  "react-dom": "preact-compat"
+}</code></pre>
+<pre><code class="javascript language-javascript">require('nom-de-plume');
+const react = require('react'); //Preact instead
+const _ = require('underscore'); // lodash</code></pre>
+<pre><code class="javascript language-javascript">const ndp = require('nom-de-plume');
+const react = require('react'); //Preact instead
+const _ = require('underscore'); // lodash
+ndp.clear(); // will remove the aliased lookups
+const underscore = require('underscore'); //actually underscore</code></pre>
+<h3 id="notes">Notes</h3>
+<p>You must have both the actual dependency and the aliased dependency installed</p>
+  </div>
+</body>
