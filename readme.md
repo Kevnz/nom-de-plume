@@ -1,5 +1,7 @@
 # Nom De Plume #
 
+[![Build Status](https://travis-ci.org/Kevnz/nom-de-plume.svg?branch=master)](https://travis-ci.org/Kevnz/nom-de-plume) [![npm version](https://badge.fury.io/js/nom-de-plume.svg)](https://badge.fury.io/js/nom-de-plume)
+
 Provide the ability to alias package names in order to substitute one dependency for another.
 
 ## Install
