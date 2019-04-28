@@ -1,6 +1,6 @@
 {
   "name": "nom-de-plume",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Allows aliasing of module names",
   "main": "index.js",
   "scripts": {
