@@ -45,7 +45,3 @@ const _ = require('underscore'); // lodash
 ndp.clear(); // will remove the aliased lookups
 const underscore = require('underscore'); //actually underscore
 ```
-
-### Notes
-
-You must have both the actual dependency and the aliased dependency installed
