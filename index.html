@@ -2,10 +2,26 @@
 <html lang="en">
 
 <head>
-  <title>nom-de-plume</title>
+  <title>Nom-De-Plume - Node module that allows aliasing of module names - Kevin Isom</title>
   <link rel="stylesheet" type="text/css" href="styles.css" />
-  <meta name="description" content="Allows aliasing of module names" />
+  <link rel="stylesheet" type="text/css" href="extend.css" />
+  <meta name="description" content="Nom-De-Plume - Node module that allows aliasing of module names" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/github.min.css" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Nom-De-Plume - Node module that allows aliasing of module names" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="Nom-De-Plume - Node module that allows aliasing of module names" />
+  <meta property="og:url" content="https://kevinisom.info/npm-de-plum" />
+  <meta property="og:image" content="https://avatars3.githubusercontent.com/u/62547?s=400&amp;v=4" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@kev_nz" />
+  <meta name="twitter:title" content="Nom-De-Plume - Node module that allows aliasing of module names" />
+  <meta name="twitter:description" content="Nom-De-Plume - Node module that allows aliasing of module names" />
+  <meta name="twitter:image" content="https://avatars3.githubusercontent.com/u/62547?s=400&amp;v=4" />
+
 </head>
 
 <body>
@@ -17,30 +33,39 @@
 <p><code>npm install nom-de-plume --save</code></p>
 <h2 id="usage">Usage</h2>
 <p>In your <code>package.json</code> file</p>
-<pre><code class="json language-json">{
-  "alias": {
-    "underscore": "lodash",
-    "react": "preact-compat",
-    "react-dom": "preact-compat"
+<pre><code class="hljs json language-json">{
+  <span class="hljs-attr">"alias"</span>: {
+    <span class="hljs-attr">"underscore"</span>: <span class="hljs-string">"lodash"</span>,
+    <span class="hljs-attr">"react"</span>: <span class="hljs-string">"preact-compat"</span>,
+    <span class="hljs-attr">"react-dom"</span>: <span class="hljs-string">"preact-compat"</span>
   }
 }</code></pre>
 <p>Or in an <code>.aliasrc</code> file</p>
-<pre><code class="json language-json">{
-  "underscore": "lodash",
-  "react": "preact-compat",
-  "react-dom": "preact-compat"
+<pre><code class="hljs json language-json">{
+  <span class="hljs-attr">"underscore"</span>: <span class="hljs-string">"lodash"</span>,
+  <span class="hljs-attr">"react"</span>: <span class="hljs-string">"preact-compat"</span>,
+  <span class="hljs-attr">"react-dom"</span>: <span class="hljs-string">"preact-compat"</span>
 }</code></pre>
-<pre><code class="javascript language-javascript">require('nom-de-plume');
-const react = require('react'); //Preact instead
-const _ = require('underscore'); // lodash</code></pre>
-<pre><code class="javascript language-javascript">const ndp = require('nom-de-plume');
-const react = require('react'); //Preact instead
-const _ = require('underscore'); // lodash
-ndp.clear(); // will remove the aliased lookups
-const underscore = require('underscore'); //actually underscore</code></pre>
-<h3 id="notes">Notes</h3>
-<p>You must have both the actual dependency and the aliased dependency installed</p>
+<pre><code class="hljs javascript language-javascript"><span class="hljs-built_in">require</span>(<span class="hljs-string">'nom-de-plume'</span>);
+<span class="hljs-keyword">const</span> react = <span class="hljs-built_in">require</span>(<span class="hljs-string">'react'</span>); <span class="hljs-comment">//Preact instead</span>
+<span class="hljs-keyword">const</span> _ = <span class="hljs-built_in">require</span>(<span class="hljs-string">'underscore'</span>); <span class="hljs-comment">// lodash</span></code></pre>
+<pre><code class="hljs javascript language-javascript"><span class="hljs-keyword">const</span> ndp = <span class="hljs-built_in">require</span>(<span class="hljs-string">'nom-de-plume'</span>);
+<span class="hljs-keyword">const</span> react = <span class="hljs-built_in">require</span>(<span class="hljs-string">'react'</span>); <span class="hljs-comment">//Preact instead</span>
+<span class="hljs-keyword">const</span> _ = <span class="hljs-built_in">require</span>(<span class="hljs-string">'underscore'</span>); <span class="hljs-comment">// lodash</span>
+ndp.clear(); <span class="hljs-comment">// will remove the aliased lookups</span>
+<span class="hljs-keyword">const</span> underscore = <span class="hljs-built_in">require</span>(<span class="hljs-string">'underscore'</span>); <span class="hljs-comment">//actually underscore</span></code></pre>
   </div>
+<a href="https://www.github.com/Kevnz/nom-de-plume" class="github-corner" aria-label="Open GitHub project"><svg
+  width="80" height="80" viewBox="0 0 250 250"
+  style="position: absolute; top: 0px; fill: rgb(255, 255, 255); right: 0px;">
+  <path class="octo-banner" d="M0 0l115 115h15l12 27 108 108V0z" fill="#151513"></path>
+  <path class="octo-arm" d="M128 109c-15-9-9-19-9-19 3-7 2-11 2-11-1-7 3-2 3-2 4 5 2 11 2 11-3 10 5 15 9 16"
+    style="transform-origin: 130px 106px 0px;"></path>
+  <path class="octo-body"
+    d="M115 115s4 2 5 0l14-14c3-2 6-3 8-3-8-11-15-24 2-41 5-5 10-7 16-7 1-2 3-7 12-11 0 0 5 3 7 16 4 2 8 5 12 9s7 8 9 12c14 3 17 7 17 7-4 8-9 11-11 11 0 6-2 11-7 16-16 16-30 10-41 2 0 3-1 7-5 11l-12 11c-1 1 1 5 1 5z">
+  </path>
+</svg>
+</a>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-64038939-2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
