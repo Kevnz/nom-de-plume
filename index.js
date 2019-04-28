@@ -3,6 +3,7 @@ const fs = require('fs');
 const packagePath = path.join(process.cwd(), './package.json');
 const rcPath = path.join(process.cwd(), '/.aliasrc');
 const aliased = {};
+const fuxor = require('fuxor')
 
 if (fs.existsSync(packagePath)) {
   const package = require(packagePath);
@@ -21,15 +22,15 @@ if (fs.existsSync(rcPath)) {
 }
 
 Object.keys(aliased).forEach((original) => {
-  const dep = require(aliased[original]);
-  require.cache[require.resolve(original)] = require.cache[require.resolve(aliased[original])];
+  fuxor.add(original, require(aliased[original]))
 });
 
 module.exports = {
   clear: () => {
+    fuxor.clear()
     Object.keys(aliased).forEach((original) => {
-      require.cache[require.resolve(original)] = null;
-      delete require.cache[require.resolve(original)];
+      require.cache[original] = null;
+      delete require.cache[original];
     });
   }
 };
