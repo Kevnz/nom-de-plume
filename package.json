@@ -6,6 +6,10 @@
   "scripts": {
     "test": "tape test/**.js"
   },
+  "files": [
+    "index.js",
+    "/test"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/Kevnz/nom-de-plume.git"
@@ -14,13 +18,13 @@
   "author": "Kevin Isom<kevin.isom@gmail.com>",
   "license": "Unlicense",
   "devDependencies": {
-    "@kev_nz/publisher": "^1.0.1",
+    "@kev_nz/publisher": "^4.0.1",
     "lodash": "^4.17.11",
     "preact": "^8.4.2",
-    "preact-compat": "^3.18.4",
-    "react": "^16.8.2",
-    "react-dom": "^16.8.2",
-    "tape": "^4.10.1",
-    "underscore": "^1.9.1"
+    "preact-compat": "^3.18.5",
+    "tape": "^4.10.1"
+  },
+  "dependencies": {
+    "fuxor": "^2.2.5"
   }
 }
